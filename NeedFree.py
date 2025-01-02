@@ -38,7 +38,7 @@ def get_free_goods(start, append_list = False):
     '''
 
     global free_list
-    retry_time = 1
+    retry_time = 0
 
     while retry_time >= 0:
         response_json = fetch_Steam_json_response(API_URL_TEMPLATE.format(pos = start))
