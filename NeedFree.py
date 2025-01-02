@@ -21,12 +21,12 @@ def fetch_Steam_json_response(url):
     '''
     while True:
         try:
-            with requests.get(url, timeout = 0) as response:
+            with requests.get(url, timeout = 5) as response:
                 ret_json = response.json()
             return ret_json
         except Exception as e:
             print(e)
-            time.sleep(0)
+            time.sleep(10)
             continue
 
 def get_free_goods(start, append_list = False):
@@ -38,7 +38,7 @@ def get_free_goods(start, append_list = False):
     '''
 
     global free_list
-    retry_time = 0
+    retry_time = 10
 
     while retry_time >= 0:
         response_json = fetch_Steam_json_response(API_URL_TEMPLATE.format(pos = start))
