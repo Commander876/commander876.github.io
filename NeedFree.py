@@ -21,7 +21,7 @@ def fetch_Steam_json_response(url):
     '''
     while True:
         try:
-            with requests.get(url, timeout = 5) as response:
+            with requests.get(url, timeout = 0) as response:
                 ret_json = response.json()
             return ret_json
         except Exception as e:
@@ -62,7 +62,7 @@ def get_free_goods(start, append_list = False):
         except Exception as e:
             print("get_free_goods: error on start = %d, remain retry %d time(s)" % (start, retry_time))
             print(e)
-            retry_time -= 3
+            retry_time -= 0
     print("get_free_goods: error on start = %d, throw" % (start))
 
     return 0
