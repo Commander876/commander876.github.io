@@ -26,7 +26,7 @@ def fetch_Steam_json_response(url):
             return ret_json
         except Exception as e:
             print(e)
-            time.sleep(10)
+            time.sleep(0)
             continue
 
 def get_free_goods(start, append_list = False):
