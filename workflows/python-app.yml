@@ -25,7 +25,7 @@ jobs:
     - name: Update free details json
       run: |
         git pull
-        git config --global user.name 'InJeCTrL'
-        git config --global user.email 'dap1933@hotmail.com'
+        git config --global user.name 'Commander876'
+        git config --global user.email 'truecommandussr@gmail.com'
         git commit -am "Automated update json"
         git push
